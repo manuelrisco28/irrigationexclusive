@@ -68,7 +68,7 @@ dias.forEach(dia => {
 
 const fotos = [
 
-    "imagenes/FOTOO 1.jpeg",
+    "FOTOO 1.jpeg",
     "imagenes/FOTO 2.jpeg",
     "imagenes/FOTO 3.jpeg",
     "imagenes/FOTO 4.jpeg",
