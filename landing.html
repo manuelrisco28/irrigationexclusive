@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Irrigation & Sod Exclusive LLC</title>
+
+
+    <meta name="description"
+content="Professional irrigation, sod installation and landscaping services in Virginia.">
+
+<meta name="keywords"
+content="irrigation, sod installation, landscaping, Virginia, grass installation">
+
+<meta name="author"
+content="Irrigation & Sod Exclusive LLC">
+
+<meta property="og:title"
+content="Irrigation & Sod Exclusive LLC">
+
+<meta property="og:description"
+content="Professional irrigation and landscaping services in Virginia">
+
+<meta property="og:image"
+content="imagenes/FOTOO 1.jpeg">
+
+
+
+
+
+
+    <link rel="stylesheet" href="landing.css">
+
+</head>
+
+<body>
+    <nav class="navbar">
+
+    <div class="logo">
+        Irrigation & Sod
+    </div>
+
+    <ul>
+
+        <li><a href="#home">HOME</a></li>
+
+        <li><a href="#about">ABOUT</a></li>
+
+        <li><a href="#services">SERVICES</a></li>
+
+        <li><a href="#contact">CONTACT</a></li>
+
+    </ul>
+
+</nav>
+
+    <section class="hero" id="home">
+
+        <!-- TEXTO -->
+
+        <div class="hero-text">
+
+            <h1>
+                WELCOME TO <br>
+                IRRIGATION & SOD <br>
+                EXCLUSIVE LLC
+            </h1>
+
+        </div>
+
+        <!-- IMAGEN -->
+
+        <div class="hero-image">
+
+            <img src="imagenes/FOTOO 1.jpeg">
+
+        </div>
+
+    </section>
+
+    <div class="service-modal" id="serviceModal">
+
+    <div class="service-modal-box">
+
+        <span class="cerrar-modal"
+              onclick="cerrarModal()">
+            ✕
+        </span>
+
+        <img id="modalImg">
+
+        <h2 id="modalTitle"></h2>
+
+        <p id="modalText"></p>
+
+    </div>
+
+</div>
+<script src="landing.js"></script>
+
+    
+
+    </body>
+
+</html>
+
+
+
+<section class="about-section" id="about">
+
+    <!-- IMAGEN -->
+
+    <div class="about-img">
+
+        <img src="imagenes/FOTO 2.jpeg">
+
+    </div>
+
+    <!-- TEXTO -->
+
+    <div class="about-text">
+
+        <h2>ABOUT US</h2>
+
+        <p>
+            At Irrigation & Sod Exclusive LLC, we specialize in high-quality 
+            irrigation systems and professional sod installation services 
+            designed to keep your outdoor spaces healthy, green, and beautiful. 
+            Our team is committed to delivering reliable workmanship, attention 
+            to detail, and excellent customer service on every project. We focus 
+            on transforming residential and commercial properties into functional 
+            and attractive landscapes that our clients can enjoy for years to come.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+    <h2>SERVICES</h2>
+
+    <div class="service-card"
+         onclick="abrirModal('sod')">
+
+        🌿 Sod Installation
+
+    </div>
+
+    <div class="service-card"
+         onclick="abrirModal('irrigation')">
+
+        💧 Irrigation Systems
+
+    </div>
+
+    <div class="service-card"
+         onclick="abrirModal('landscaping')">
+
+        🌳 Landscaping
+
+    </div>
+
+    <div class="service-card"
+         onclick="abrirModal('drainage')">
+
+        🪨 Drainage Solutions
+
+    </div>
+
+</section>
+
+<!-- BEFORE & AFTER -->
+
+<section class="before-after">
+
+    <h2>BEFORE & AFTER</h2>
+
+    <div class="ba-card">
+
+        <!-- BEFORE -->
+
+        <div class="ba-img">
+
+            <img src="imagenes/FOTO 23.jpg">
+
+            <span>BEFORE</span>
+
+        </div>
+
+        <!-- AFTER -->
+
+        <div class="ba-img">
+
+            <img src="imagenes/FOTO 4.jpeg">
+
+            <span>AFTER</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- WHY CHOOSE US -->
+
+<section class="why">
+
+    <h2>WHY CHOOSE US</h2>
+
+    <p>
+        We are committed to providing high-quality sod
+        installation and irrigation services with professionalism,
+        attention to detail, and customer satisfaction.
+        Our team works hard to transform outdoor spaces
+        into beautiful and functional landscapes.
+    </p>
+
+</section>
+
+<!-- WHY CLIENTS TRUST US -->
+
+<!-- WHY CLIENTS TRUST US -->
+
+<section class="trust">
+
+    <h2>WHY CLIENTS TRUST US</h2>
+
+    <p>
+        Our clients trust us because we deliver
+        quality work, reliable service, and beautiful
+        outdoor transformations with attention to detail.
+    </p>
+
+    <button class="trust-btn"
+            onclick="abrirTrustModal()">
+
+        VIEW GUARANTEE
+
+    </button>
+
+</section>
+
+<!-- MODAL -->
+
+<div class="trust-modal"
+     id="trustModal">
+
+    <div class="trust-box">
+
+        <span class="cerrar-trust"
+              onclick="cerrarTrustModal()">
+            ✕
+        </span>
+
+        <img src="imagenes/FOTO 22.jpg">
+
+        <h3>OUR GUARANTEE</h3>
+
+        <p>
+            We guarantee quality work,
+            professional service, and customer satisfaction
+            on every project we complete.
+        </p>
+
+    </div>
+
+</div>
+
+<!-- CONTACT US -->
+
+<section class="contact" id="contact">
+
+    <h2>CONTACT US</h2>
+
+    <p>
+        Ready to transform your outdoor space?
+        Contact us today for a free estimate and
+        let’s bring your project to life.
+    </p>
+
+    <a href="https://wa.me/18048784382"target="_blank"class="contact-btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+
+        <span>CHAT ON WHATSAPP</span>
+    </a>
+    <div class="email-box">
+
+        EMAIL:
+        Irrigationexclusive@gmail.com
+
+    </div>
+
+</section>
+
+<footer class="footer">
+
+    <h3>
+        Irrigation & Sod Exclusive LLC
+    </h3>
+
+    <p>
+        Professional irrigation, sod installation and landscaping services in Virginia.
+    </p>
+
+    <div class="footer-info">
+
+        <span>
+            📞 +1 (804) 878-4382
+        </span>
+
+        <span>
+            ✉️ Irrigationexclusive@gmail.com
+        </span>
+
+        <span>
+            📍 North Chesterfield, Virginia
+        </span>
+
+    </div>
+
+    <p class="copy">
+        © 2026 Irrigation & Sod Exclusive LLC
+    </p>
+
+</footer>
+
+
+

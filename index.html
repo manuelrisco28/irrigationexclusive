@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Irrigation & Sod Exclusive LLC</title>
+    
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- GALERÍA -->
+
+        <div class="galeria">
+
+            <!-- IMAGEN GRANDE -->
+
+            <div class="imagen-grande">
+
+                <img src="imagenes/FOTOO 1.jpeg">
+
+                <button class="ver-fotos" onclick="abrirGaleria()">
+
+                    Ver fotos
+
+                </button>
+
+            </div>
+
+            <!-- IMÁGENES PEQUEÑAS -->
+
+            <div class="imagen-mapa">
+
+        <iframe
+            src="https://www.google.com/maps?q=9513+Kennesaw+Rd+North+Chesterfield+VA+23236&output=embed">
+        </iframe>
+
+        <button class="ver-mapa" onclick="abrirMapa()">
+            Ver ubicación
+        </button>
+
+    </div>
+
+        </div>
+
+         <div id="modalGaleria" class="modal">
+
+            <span class="cerrar" onclick="cerrarGaleria()">✕</span>
+
+            <div class="modal-contenido" id="contenedorFotos"></div>
+
+        </div>
+
+
+        <div id="modalZoom" class="modal-zoom">
+
+    <span class="cerrar-zoom" onclick="cerrarZoom()">✕</span>
+
+    <!-- IZQUIERDA -->
+
+    <button class="zoom-flecha izquierda" onclick="imagenAnterior()">
+        ❮
+    </button>
+
+    <!-- IMAGEN -->
+
+    <img id="imagenZoom">
+
+    <!-- DERECHA -->
+
+    <button class="zoom-flecha derecha" onclick="imagenSiguiente()">
+        ❯
+    </button>
+
+</div>
+
+       <!-- MODAL OPINIONES -->
+
+<!-- MODAL OPINIONES GOOGLE -->
+
+<!-- MODAL OPINIONES -->
+
+<div id="modalOpiniones" class="reviews-modal">
+
+    <div class="opiniones-google">
+
+        <!-- CERRAR -->
+
+        <span class="cerrar-reviews"
+              onclick="cerrarOpiniones()">
+            ✕
+        </span>
+
+        <!-- TOP -->
+
+        <div class="top-opinion">
+
+            <div>
+
+                <h1>
+                    Irrigation & Sod Exclusive LLC
+                </h1>
+
+                <p>
+                   9513 Kennesaw Rd north chesterfield VA 23236, Estados Unidos
+                </p>
+
+            </div>
+
+            <button class="btn-escribir"
+            onclick="abrirEscribirOpinion()">
+             Escribir una opinión
+          </button>
+
+        </div>
+
+        <!-- MODAL ESCRIBIR OPINIÓN -->
+
+<div id="modalEscribir"
+     class="modal-escribir">
+
+    <div class="escribir-box">
+
+        <!-- HEADER -->
+
+        <div class="header-escribir">
+
+            <h2>
+                Escribir una opinión
+            </h2>
+
+            <span onclick="cerrarEscribirOpinion()">
+                ✕
+            </span>
+
+        </div>
+
+        <!-- PERFIL -->
+
+        <div class="perfil-google">
+
+            <div class="avatar-google">
+                M
+            </div>
+
+            <div>
+
+                <h3>
+                    Manuel Risco
+                </h3>
+
+                <p>
+                    se mostrará públicamente en Google
+                </p>
+
+            </div>
+
+        </div>
+
+<!-- NOMBRE -->
+
+        <input type="text"id="nombreUsuario"placeholder="Tu nombre">
+                
+        <!-- ESTRELLAS -->
+
+        <div class="stars-select">
+
+            <span onclick="seleccionarEstrella(1)">☆</span>
+            <span onclick="seleccionarEstrella(2)">☆</span>
+            <span onclick="seleccionarEstrella(3)">☆</span>
+            <span onclick="seleccionarEstrella(4)">☆</span>
+            <span onclick="seleccionarEstrella(5)">☆</span>
+
+        </div>
+
+        <!-- TEXTO -->
+
+        <div class="textarea-box">
+
+    <textarea id="textoOpinion" placeholder=" "></textarea>
+
+    <span class="fake-placeholder">
+        Comparte detalles sobre tu experiencia en este lugar
+    </span>
+
+</div>
+
+        <!-- SUBIR -->
+
+        <div class="subir-box">
+
+            <label for="subirMedia"
+                   class="btn-subir">
+
+                📷 Agregar fotos y videos
+
+            </label>
+
+            <input type="file"id="subirMedia"multiple accept="image/*,video/*">
+
+        </div>
+
+        <!-- BOTONES -->
+
+        <div class="acciones-review">
+
+            <button onclick="cerrarEscribirOpinion()"
+                    class="btn-cancelar">
+
+                Cancelar
+
+            </button>
+
+            <button class="btn-publicar"
+                onclick="publicarReview()">
+
+                Publicar
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+        <!-- RATING -->
+
+        <div class="rating-google">
+
+            <span class="numero-grande"
+                  id="ratingNumberGrande">
+                0.0
+            </span>
+
+            <span class="stars-google"
+                  id="ratingStarsGrande">
+                ☆☆☆☆☆
+            </span>
+
+            <span class="cantidad-op"
+                  id="totalReviews">
+                0 opiniones
+            </span>
+
+        </div>
+
+        <!-- ETIQUETAS -->
+
+                    <div class="reviews-tags">
+
+                <span class="tag activo">
+                    Todas
+                </span>
+
+                <span class="tag">
+                    instalación de césped 
+                </span>
+
+                <span class="tag">
+                    patio trasero 
+                </span>
+
+                <span class="tag">
+                    sistema de riego 
+                </span>
+
+                <span class="tag">
+                    capa superficial del suelo 
+                </span>
+
+                <!-- BOTÓN +6 -->
+
+                <span class="tag mas-tags"
+                onclick="toggleTags()">
+                +6
+            </span>
+
+            </div>
+
+<!-- TAGS OCULTOS -->
+
+        <div class="reviews-tags extras-tags"
+            id="extrasTags">
+
+            <span class="tag">
+                equipo
+            </span>
+
+            <span class="tag">
+                yard transformation
+            </span>
+
+            <span class="tag">
+                sod care instructions
+            </span>
+
+            <span class="tag">
+                grass removal
+            </span>
+
+            <span class="tag">
+                quick response
+            </span>
+
+            <span class="tag">
+                arbustos
+            </span>
+
+        </div>
+
+        <hr>
+
+        <!-- ORDEN -->
+
+        <div class="ordenar">
+
+            <p>
+                Ordenar por
+            </p>
+
+            <div class="orden-tags">
+
+    <button class="tag activo"
+            onclick="ordenarReviews('relevantes')">
+        Más relevantes
+    </button>
+
+    <button class="tag"
+            onclick="ordenarReviews('recientes')">
+        Más recientes
+    </button>
+
+    <button class="tag"
+            onclick="ordenarReviews('alta')">
+        Calificación más alta
+    </button>
+
+    <button class="tag"
+            onclick="ordenarReviews('baja')">
+        Calificación más baja
+    </button>
+
+</div>
+
+        </div>
+
+        <!-- OPINIONES -->
+
+        <div id="listaOpiniones"
+             class="lista-opiniones">
+
+        </div>
+
+    </div>
+
+</div>
+        <!-- INFORMACIÓN -->
+
+        <div class="info">
+
+
+            <h1>
+                Irrigation & Sod Exclusive LLC
+            </h1>
+
+            <!-- RATING -->
+
+            <div class="rating">
+
+    <span
+    class="reviews"id="ratingCompleto"onclick="abrirOpiniones()"style="cursor:pointer; font-size:16px;">
+
+        0.0 ☆☆☆☆☆ (0 opiniones de Google)
+
+    </span>
+
+</div>
+
+            <p class="categoria">
+
+                Proveedor de servicio en Chesterfields, Virginia
+
+            </p>
+
+            <!-- BOTONES -->
+
+            <div class="botones">
+
+                <button onclick="abrirSitio()">
+                    🌐 Sitio web
+                </button>
+
+                <button onclick="comoLlegar()">
+                    📍 Cómo llegar
+                </button>
+
+                <button onclick="toggleExtras()">
+                    +4
+                </button>
+
+            </div>
+
+<!-- BOTONES OCULTOS -->
+
+            <div class="botones-extra" id="botonesExtra">
+
+                <button onclick="abrirOpiniones()">
+                    ⭐ Opiniones
+                </button>
+
+                <button onclick="guardarPagina()">
+                    🔖 Guardar
+                </button>
+
+                <button onclick="compartirPagina()">
+                    🔗 Compartir
+                </button>
+
+                <button onclick="llamarTelefono()">
+                    📞 Llamar
+                </button>
+
+            </div>
+
+            <!-- DETALLES -->
+
+            <div class="detalles">
+
+                <!-- DIRECCIÓN -->
+
+                <div class="detalle-item">
+         
+                    <p>
+
+                        <strong>
+                            Dirección:
+                        </strong>
+
+                        9513 Kennesaw Rd north chesterfield VA 23236
+
+                    </p>
+
+                </div>
+
+                <!-- TELÉFONO -->
+                
+                <div class="detalle-item">
+                    <p>
+                        <strong>
+                            Teléfono:
+                        </strong>
+
+                        +1 (804) 878-4382
+                    </p>
+                </div>
+                <!-- HORARIO -->
+
+                <!-- HORARIO -->
+
+<div class="detalle-item"> 
+
+    <div class="horario-box">
+
+        <div class="horario-header" onclick="toggleHorario()">
+
+            <span>
+
+                <strong>
+                Horario:
+                </strong>
+
+                Lunes: 7:30 a.m. - 18:00 p.m.
+
+            </span>
+
+            <span id="flecha">
+                ▼
+            </span>
+
+        </div>
+
+        <div id="listaHorarios">
+
+            <p>Martes: 7:30 a.m. - 18:00 p.m.</p>
+
+            <p>Miércoles: 7:30 a.m. - 18:00 p.m.</p>
+
+            <p>Jueves: 7:30 a.m. - 18:00 p.m.</p>
+
+            <p>Viernes: 7:30 a.m. - 18:00 p.m.</p>
+
+            <p>Sábado: 7:30 a.m. - 18:00 p.m.</p>
+
+            <p>Domingo: Cerrado</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+            <!-- DESCRIPCIÓN -->
+
+            <div class="descripcion">
+
+                <h3>
+                    Sobre nosotros
+                </h3>
+
+                <p>
+
+                  At Irrigation & Sod Exclusive LLC, we are committed to
+                delivering high-quality landscaping, sod installation,
+                and irrigation services with professionalism, reliability,
+                and attention to detail. Our mission is to transform
+                outdoor spaces into beautiful, functional, and healthy                    environments that our clients can enjoy for years to come.
+
+                 We take pride in providing outstanding customer service,
+                premium materials, and efficient solutions tailored to
+                each project. Whether it’s a residential or commercial
+                property, our team works hard to exceed expectations and
+                deliver results that enhance the beauty and value of every
+                 outdoor space.
+
+                </p>
+
+            </div>
+
+
+
+</div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
