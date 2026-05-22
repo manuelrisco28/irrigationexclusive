@@ -10,7 +10,7 @@ function abrirModal(tipo){
 
     if(tipo === "sod"){
 
-        img.src = "imagenes/FOTO 17.jpeg";
+        img.src = "FOTO 17.jpeg";
 
         title.innerText = "Sod Installation";
 
@@ -19,7 +19,7 @@ function abrirModal(tipo){
 
     if(tipo === "irrigation"){
 
-        img.src = "imagenes/FOTO 7.jpeg";
+        img.src = "FOTO 7.jpeg";
 
         title.innerText = "Irrigation Systems";
 
@@ -28,7 +28,7 @@ function abrirModal(tipo){
 
     if(tipo === "landscaping"){
 
-        img.src = "imagenes/FOTO 18.jpeg";
+        img.src = "FOTO 18.jpeg";
 
         title.innerText = "Landscaping";
 
@@ -36,7 +36,7 @@ function abrirModal(tipo){
     }
 if(tipo === "drainage"){
 
-        img.src = "imagenes/FOTO 20.jpeg";
+        img.src = "FOTO 20.jpeg";
 
         title.innerText = "Drainage Solutions";
 
